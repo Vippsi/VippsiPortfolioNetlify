@@ -11,6 +11,10 @@
     />
     <link rel="stylesheet" href="/style.css" />
     <script src="./index.js"></script>
+    <script
+      defer
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
   </head>
   <body>
     {% include 'header.njk' %}
@@ -18,5 +22,17 @@
       {{ content | safe }}
     </main>
     {% include 'footer.njk' %}
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', (user) => {
+          if (!user) {
+            window.netlifyIdentity.on('login', () => {
+              document.location.href = '/admin/';
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
