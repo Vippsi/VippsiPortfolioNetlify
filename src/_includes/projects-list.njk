@@ -1,0 +1,14 @@
+<section class="projects">
+  <div class="container flow">
+    <div class="projects__content flow">
+      <h2 class="section-title">Projects</h2>
+      <div>
+        {%- for project in collections.projects | reverse -%}
+
+        <li>{% include 'project-template.njk' %}</li>
+
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>

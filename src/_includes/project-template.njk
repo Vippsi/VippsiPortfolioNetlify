@@ -1,0 +1,18 @@
+<div class="container flow project__card">
+  <h2>{{ project.data.title }}</h2>
+  <div class="project__image">
+    <img src="{{ project.data.img }}" alt="" />
+  </div>
+  <div class="project__text">
+    <h3>Project Description</h3>
+    <p>{{ project.data.description }}</p>
+  </div>
+  <div class="project__tech-stack">
+    <h3>Tech Stack</h3>
+    <p>{{ project.data.tech_stack }}</p>
+  </div>
+  <div class="project__buttons">
+    <button class="btn-primary">Code</button>
+    <button class="btn-secondary">Live</button>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+---
+title: example
+layout: 'base.njk'
+---
+
+<section class="hero">
+  <div class="flow">
+    <div class="hero__content flow">
+      <div class="image-background">
+        <img
+          class="hero__image"
+          src="./assets/hero-laptop.jpg"
+          alt="hero-image"
+        />
+      </div>
+      <div class="hero-text">
+        <h1>Hi, my name is Jonathan and I'm a software developer</h1>
+        <div class="about-div">
+          <p>
+            I am a Full Stack web developer who loves technology, and what it
+            can do in our day-to-day life. I'm interested in working on
+            ambitious projects, and working with people!
+          </p>
+        </div>
+      </div>
+      <img
+        src="assets/Jonathan_headshot crop.jpg"
+        alt="profile"
+        class="headshot"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="skills">
+  <div class="container flow">
+    <div class="skills__content flow">
+      <h2 class="section-title">Skills</h2>
+      <!--#TODO Make adding the pipe dynamic, so skills added later down line don't require manual formatting-->
+      <ul role="list" class="skills-list">
+        <li class="skills-item">HTML</li>
+        <li class="skills-item">CSS</li>
+        <li class="skills-item">JavaScript</li>
+        <li class="skills-item">React</li>
+        <li class="skills-item">Redux</li>
+        <li class="skills-item">Node.js</li>
+        <li class="skills-item">Express</li>
+        <li class="skills-item">Python</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% include 'projects-list.njk' %} 
+
+<section class="contact">
+  <div class="container flow">
+    <div class="contact__content flow">
+      <h2 class="section-title">Contact Me</h2>
+    </div>
+    <div class="form-container">
+      <form>
+        <label for="input-full-name">Full Name:</label>
+        <input type="text" id="input-full-name" name="input-full-name" />
+
+        <label for="input-email">Email:</label>
+        <input type="text" id="input-email" name="input-email" />
+
+        <label for="input-message">Message:</label>
+        <textarea type="text" id="input-message" name="input-message">
+        </textarea>
+        <button class="contact-button">Send</button>
+      </form>
+    </div>
+  </div>
+</section>
