@@ -3,7 +3,7 @@
     <div class="projects__content flow">
       <h2 class="section-title">Projects</h2>
       <div>
-        {%- for project in collections.projects | reverse -%}
+        {%- for project in collections.projects -%}
 
         <li>{% include 'project-template.njk' %}</li>
 
